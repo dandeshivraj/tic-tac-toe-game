@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #83a4d4, #b6fbff);
+  overflow: hidden;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 90vmin;
+  height: 90vmin;
+  max-width: 400px;
+  max-height: 400px;
+  background: #444;
+  z-index: 1;
+}
+
+.cell {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vmin;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cell:hover {
+  background: #e0e0e0;
+}
+
+.status {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background: #2196F3;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1976D2;
+}
+
+/* Result Screen */
+.result-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  text-align: center;
+}
+
+.result-screen .result-message {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
